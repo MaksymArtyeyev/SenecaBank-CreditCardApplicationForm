@@ -1,0 +1,166 @@
+
+.main-box {
+	width: 1175px;
+	height: 750px;
+	border: 4px solid black;
+	background-color: #F5F5F5;
+	padding: 4px;
+}
+
+.page-title {
+	margin: 5px;
+}
+
+.client-information-box {
+	width: 95%;
+	height: 50%;
+	border: 4px solid #AADAE9;
+	border-style: outset;
+	border-bottom: 0px;
+	background-color: #CCDAE9;
+	margin: 0px auto;
+	padding: 5px;
+}
+
+.information-inside-box {
+	width: 95%;
+	height: 30%;
+	display: block;
+	margin: 5px auto;
+	padding-left: 20px;
+}
+
+.information-inside-box p{
+	margin-left: -25px;
+}
+
+.information-inside-box div {
+	float:left;
+	padding: 0px 10px;
+}
+
+.finish-box {
+	width: 95%;
+	height: 30%;
+	border: 4px solid #AADAE9;
+	border-top: 0px;
+	border-style: outset;
+	background-color: #CCDAE9;
+	display: table;
+	margin: 0px auto;
+	padding: 5px;
+}
+
+.error-box {
+	width: 60%;
+	height: 90%;
+
+	display: block;
+	margin: 5px auto;
+	display: table-cell;
+}
+
+.error-div-box {
+	padding: 5px;
+	overflow-y: scroll;
+	width: 95%;
+	height: 170px;
+	resize: none;
+	background-color: white;
+}
+
+.submit-box {
+	width: 40%;
+	height: 90%;
+
+	display: block;
+	margin: 5px auto;
+	display: table-cell;
+}
+
+footer {
+	width: 1200px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+footer a {
+	font-size: 25px;
+	font-weight: bold;
+	margin: 0px 20px;
+}
+
+p label, input {
+	display: block;
+}
+
+input {
+	height: 25px;
+	font-size: 16px;
+}
+
+div label{
+	display: block;
+}
+
+select {
+	overflow-y: scroll;
+	font-size: 16px;
+	padding: 2px;
+}
+
+input[type="checkbox"] {
+	display: inline;
+	height: 25px;
+	vertical-align: middle;
+}
+
+.own-rent-box div {
+	display: block;
+}
+.own-rent-box {
+	width: 170px;
+}
+
+.information-title {
+	margin: 5px;
+	margin-bottom: 10px;
+	margin-top: -5px;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 18px;
+}
+
+.error-textarea {
+	overflow-y: scroll;
+	width: 95%;
+	height: 170px;
+	resize: none;
+}
+
+.submit-box div p {
+	margin: 15px 5px;
+	float: left;
+}
+
+.submit-box input {
+	display: inline;
+	margin: 15px 5px;
+	height: 16px;
+}
+
+.submit-box a {
+	display: inline;
+	float: left;
+	margin: 15px 0px 15px 50px;
+}
+.ref-number {
+	height: 20px;
+	width: 80px;
+}
+
+.submit-box button{
+	margin: 0px 5px;
+	height: 50px;
+}
+

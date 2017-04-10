@@ -1,0 +1,178 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>int222_162b01 - Assignment 3 - Application Form </title>
+    <link rel="stylesheet" href="css/normalize.css"   type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="css/sitecss.css" type="text/css" media="screen" /> 
+    <script src='javascript/myscript.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <form method="post" action="" id="application" name="application" onsubmit="return validateForm();">
+      <div class="main-box">
+       <h2 class="page-title">Seneca Bank - Credit Card Application Form</h2>
+        <div class="client-information-box">
+          <div class="information-inside-box">
+              <p class="information-title">Personal Information</p>
+                  
+                    <div>
+                      <label for="fName"><a title="Free format">First Name*</a></label>
+                      <input type="text" size="20" maxlength="20" name="fName" id="fName" autofocus="autofocus"/>
+                    </div>
+                    <div>
+                      <label for="sName"><a title="Free format">Surname*</a></label>
+                      <input type="text" size="20" maxlength="30" name="sName" id="sName" />
+                    </div>
+                      
+                    <div>
+                      <label for="dob"><a title="Phone Number">Date Of Birth*</a></label> 
+                      <input type="text" size="10" placeholder="MMMYYYY" maxlength="7" name="dob" id="dob" />   
+                    </div>
+                    <div>
+                      <label for="email"><a title="Free format">Email Address*</a></label> 
+                      <input type="text" size="20" maxlength="60" name="email" id="email" /> 
+                    </div>
+                    <div>
+                      <label for="phone"><a title="Limit of 5 characters">Phone No.*</a></label> 
+                      <input type="text" size="20" maxlength="12" name="phone" id="phone" />
+                    </div>                 
+          </div>
+          <hr />
+          <div class="information-inside-box">
+            <p class="information-title">Primary Applicant's Address</p>          
+                    <div>
+                      <label for="address"><a title="Free format">Home address*</a></label>
+                      <input type="text" size="30" maxlength="60" name="address" id="address" />
+                    </div>
+
+                    <div>
+                      <label for="apt"><a title="Free format">Apt</a></label>
+                      <input type="text" size=5 maxlength="4" name="apt" id="apt" />
+                    </div>
+                      
+                    <div>
+                      <label for="city"><a title="Phone Number">City*</a></label> 
+                      <input type="text" size="20" maxlength="40" name="city" id="city" />
+                    </div>
+
+                    <div>
+                       <label for="province"><a title="Phone Number">Province*</a></label>
+                         <select id="province" name="province" size="2">
+                           <optgroup label="Province">                    
+                             <option value="Alberta">Alberta</option>
+                             <option value="British Columbia">British Columbia</option>
+                             <option value="Manitoba">Manitoba</option>
+                             <option value="New Brunswick">New Brunswick</option>
+                             <option value="Newfoundland & Labrador">Newfoundland & Labrador</option>
+                             <option value="Nova Scotia">Nova Scotia</option>
+                             <option value="Ontario">Ontario</option>
+                             <option value="Prince Edward Island">PE</option>
+                             <option value="Quebec">Quebec</option>
+                             <option value="Saskatchewan">Saskatchewan</option>
+                           </optgroup>
+                           <optgroup label="Territory">
+                             <option value="Northwest Territories">Northwest Territories</option>
+                             <option value="Nunavut">Nunavut</option>
+                             <option value="Yukon">Yukon</option>
+                           </optgroup>
+                         </select>
+                    </div>
+                    <div>
+                      <label for="postal"><a title="Limit of 5 characters">Postal Code*</a></label> 
+                      <input type="text" size="8" placeholder="ANA NAN" maxlength="7" name="postal" id="postal" />
+                    </div>          
+          </div>
+          <hr />
+
+          <div class="information-inside-box">
+           <p class="information-title">Housing Information</p>      
+                <div>
+                 <div>Do you</div>
+                  <div class="own-rent-box">
+                    <div><input type="checkbox" name="hStatus" id="s01" value="Own" onclick="OwnRentValidate(1)"/>Own the property</div>                                    
+                      <div><input type="checkbox" name="hStatus" id="s02" value="Rent" onclick="OwnRentValidate(2)"/>Rent the property</div>
+                  </div>
+                 </div>
+
+                 <div>
+                  <label for="payment"><a title="Free format">$Monthly Payment*</a></label>
+                  <input type="text" size="8" maxlength="6" name="payment" id="payment" />
+                 </div>
+                      
+                 <div>
+                  <label for="income"><a title="Phone Number">Monthly Income*</a></label> 
+                  <input type="text" size="8" maxlength="6" name="income" id="income" />   
+                 </div>
+
+                 <div>
+                  <label for="currYears"><a title="Free format">Years at curent location*</a></label> 
+                  <input type="text" size="3" maxlength="2" name="currYears" id="currYears" />
+                 </div>
+
+                 <div>
+                  <label for="preCode"><a title="Limit of 5 characters">Pre-authorized Code</a></label> 
+                  <input type="text" size="8" name="preCode" id="preCode" />
+                 </div>       
+          </div>
+        <hr />
+        </div>
+        
+        <div class="finish-box">
+          <div class="error-box">
+            <div class = "error-div-box" name="error" id = "error">If you submit your application with errors and/or omissions, a list of errors and/or omissions will show here. Make the corrections and re-submit. <br /><br /> If you continue to have a problem submitting your application, make a note of the Reference No. and call us at 1-800-010-2000.</div>
+
+          </div>  
+
+          <div class="submit-box">
+            <div>
+              <div><p>I consent to have a credit check performed - </p></div>
+              <div>
+                <input type="checkbox" name="creditCheck" id="c01" value="Yes" onclick="CreditCheckValidate(1)"/>Yes
+            <input type="checkbox" name="creditCheck" id="c02" value="No" onclick="CreditCheckValidate(2)"/>No
+          </div>
+            </div>
+
+            <div>
+              <div><p>I consent to have email messages sent to me - </p></div>
+              <div>
+                <input type="radio" name="emailConsent" id="m01" value="Yes" />Yes
+            <input type="radio" name="emailConsent" id="m02" value="No" />No
+              </div>
+            </div>
+
+            <div>
+              <script>
+               document.write('<p>Submitted on :  ' + getCurrentDate() + '</p>');
+            </script>
+              <label for="refNo"><a title="Refference Number">Ref. #</a></label> 
+              <input class="ref-number" type="text" size="8" name="refNo" id="refNo" readonly="readonly" />
+            </div>
+        <hr />
+
+        <div>
+          <button class="button" type="submit" value="submit application">Submit Application</button>
+          <button class="button" type="reset" value="reset">Start Over</button>
+          <p>* = Required Information</p>
+        </div>
+          </div>
+
+          <input type="hidden" name="hName" value="Artyeyev" />
+          <input type="hidden" name="hId" value="int222_162b01" />
+
+        </div>
+
+        <footer class="foot">
+          <a href="../">My zenit Account</a>
+          <a href="javascript/myscript.js">My JavaScript</a>
+          <a href="css/sitecss.css">My CSS</a>
+          <a href="honesty.html">My Honesty</a>
+          <script>
+           var dt=new Date(document.lastModified);   // Get document last modified date
+           document.write('<p>This page was last updated on '+dt.toLocaleString()) + '</p>';
+          </script>
+        </footer>
+      </div>
+    </form>
+   </body>
+</html>
